@@ -1,0 +1,145 @@
+body{
+  background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+}
+
+:root{
+  --main-color: #380469;
+}
+  
+.container{
+  margin: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+     
+}
+
+.book-lover{
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+h1{
+  margin-bottom: 50px;
+  color: var(--main-color);
+  font-weight: 700;
+}
+
+.search-engine p{
+  font-size: 13px;
+  margin-bottom: 40px;;
+  margin-top: 10px;
+}
+
+
+.search-engine{
+width: 300px;
+text-align: center;
+
+
+}
+
+.results{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.search-engine, .results{
+  border: solid 2px #4B0091;
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: white;
+  
+  
+}
+
+.search-input{
+  font-size: 14px;
+  padding:10px 15px;
+  text-align: center;
+
+   
+}
+
+.button{
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: all ease-in-out 200ms;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.button:hover{
+  background-color: #7D00F2
+}
+
+.word-result, .meaning{
+  min-width: 450px;
+  border: solid 1px #D8B2FB;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 0 10px;
+  
+}
+
+.word-result{
+  display: flex;
+  align-items: center;
+
+}
+
+#word:first-letter{
+  text-transform: capitalize;
+}
+
+.word{
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--main-color);
+
+}
+
+
+.fonetic{
+  font-size: 25px;
+  color: var(--main-color);
+  padding-left: 20px;
+}
+
+
+
+.partOfSpeech{
+  font-weight: 700;
+  font-size: 20px;
+ 
+}
+
+.partOfSpeech::first-letter{
+  text-transform: capitalize;
+}
+
+.synonyms{
+  margin-bottom: 10px;
+  font-size: 12px;
+  
+}
+
+#Synonym{
+  font-weight: bold;
+}
+
+.definition{
+  margin-bottom: 5px;
+}
+.definition::before{
+  content: "_ ";
+  
+}
+

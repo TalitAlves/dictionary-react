@@ -1,9 +1,11 @@
 import './App.css';
+import Dictionary from "./Dictionary"
 
-function App() {
+
+function App(props) {
   return (
     <div className="App">
-    Hello word
+    <Dictionary/>
     </div>
   );
 }
