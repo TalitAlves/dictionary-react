@@ -1,5 +1,5 @@
 body{
-  background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 }
 
 :root{
@@ -7,12 +7,13 @@ body{
 }
   
 .container{
-  margin: 20px 40px;
+  margin: 45px 40px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: stretch;
-     
+  justify-content: center;
+ 
+  
 }
 
 .book-lover{
@@ -85,7 +86,7 @@ text-align: center;
   border: solid 1px #D8B2FB;
   border-radius: 5px;
   margin-top: 10px;
-  padding: 0 10px;
+  padding: 10px;
   
 }
 
