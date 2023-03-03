@@ -35,9 +35,18 @@ if (props.data){
         <div className="meaning">
         <div className="partOfSpeech">verb:</div>
           <div className="definition">have sexual intercourse with</div>
+          <div className="synonyms">Synonyms:
+            <li>bang;</li>
+            <li>be intimated;</li>
+            <li>bed;</li>
+            </div>
           <div className="partOfSpeech">noun:</div>
           <div className="definition">slang for sexual intercourse</div>
-          <div className="synonyms"></div>
+          <div className="synonyms">
+            <li>ass;</li>
+            <li>fucking;</li>
+            <li>nokie;</li>
+            </div>
             
         </div>
         <hr></hr>

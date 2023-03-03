@@ -132,8 +132,9 @@ text-align: center;
   
 }
 
-#Synonym{
-  font-weight: bold;
+.synonyms li{
+ font-size: 13px;
+ padding-left: 15px;
 }
 
 .definition{
