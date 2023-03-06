@@ -5,7 +5,7 @@ import Dictionary from "./Dictionary"
 function App(props) {
   return (
     <div className="App">
-    <Dictionary/>
+    <Dictionary defaultWord="flower"/>
     </div>
   );
 }
