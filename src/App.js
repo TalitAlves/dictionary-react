@@ -2,10 +2,11 @@ import './App.css';
 import Dictionary from "./Dictionary"
 
 
-function App(props) {
+function App() {
   return (
     <div className="App">
-    <Dictionary defaultWord="flower"/>
+        <Dictionary defaultWordEn={"Light"} defaultWordPt={"Solidário"}/>
+        
     </div>
   );
 }

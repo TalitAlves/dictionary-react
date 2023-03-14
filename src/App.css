@@ -16,6 +16,36 @@ body{
   
 }
 
+.select-language{
+  display: flex;
+  align-items: center;
+  justify-items : center;
+}
+
+.custom-select{
+  font-size: 11px;
+  padding:2px;
+  text-align: center;
+  margin: 10px 4px;
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 5px;
+ 
+}
+
+.select-tittle{
+  color: var(--main-color);
+  font-size: 12px;
+  font-weight: 400;
+  
+}
+
+.btn-primary{
+  margin: 10px;
+
+}
+
 .book-lover{
   width: 250px;
   margin-bottom: 20px;
@@ -23,6 +53,7 @@ body{
 
 h1{
   margin-bottom: 50px;
+  margin-top: 15px;
   color: var(--main-color);
   font-weight: 700;
 }
@@ -61,7 +92,6 @@ text-align: center;
   font-size: 14px;
   padding:10px 15px;
   text-align: center;
-
    
 }
 

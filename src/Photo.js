@@ -1,8 +1,8 @@
 import React from "react";
 
 export default function Photo(props){
-    if(props.photos){
-       return(
+    if(props.photos && props.language==="EN"){
+        return(
         <div className="photos">
             {props.photos.map(function(photos,index){
                 if(index<3){
@@ -13,5 +13,5 @@ export default function Photo(props){
             )} else{return null}})}
         </div>
     )
-    }else{return null}
+    }else {return (null)}
 }
