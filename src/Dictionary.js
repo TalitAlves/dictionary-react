@@ -10,10 +10,10 @@ import Photo from "./Photo";
 
 export default function Dictionary(props){
 let keyWord;
+const [impressWord, setImpressWord] = useState(props.defaultWordPt)
 const [keyWordPt, setKeyWordPt] = useState(props.defaultWordPt)
 const [keyWordEn, setKeyWordEn] = useState(props.defaultWordEn)
 const [data, setData] = useState("");
-const [errorData, setErrorData]=useState("")
 const [dataPT, setDataPT] = useState("");
 const [loaded, setLoad] = useState(false)
 const [photos, setPhoto] = useState("")
@@ -37,13 +37,7 @@ function load(){
 
 function handleResponse(response){  
     setData(response.data[0]);
-}
-
-function handleError(error){
-    error.preventDefault()
-    setErrorData(error)
-    console.log(error)
-
+    console.log(response)
 }
 
 
@@ -53,6 +47,7 @@ function handleSubmit(event){
     search();
 } else if(language==="PT"){
     searchPT()
+   setImpressWord(keyWordPt)
     
 }}
 
@@ -61,7 +56,7 @@ function handleResponsePhotos(response){
 }
 
 function handleApiPT(response){
-    setDataPT(response.data[0])
+    setDataPT(response)
     console.log(response)
 
 }
@@ -70,12 +65,16 @@ function searchPT(){
     let apiURLPT = `https://dicio-api-ten.vercel.app/v2/${keyWordPt}`;
     axios.get(apiURLPT).then(handleApiPT)
 
+    let apiKey="40430ba55fc1o6890ct12a8363f6d64d";
+    let apiPhotos= `https://api.shecodes.io/images/v1/search?query=${keyWordPt}&key=${apiKey}`;
+    axios.get(apiPhotos).then(handleResponsePhotos); 
+
 }
 
 
 function search(){
     let apiURL= `https://api.dictionaryapi.dev/api/v2/entries/en/${keyWordEn}`;
-    axios.get(apiURL).then(handleResponse).catch(handleError);
+    axios.get(apiURL).then(handleResponse)
    
 
     let apiKey="40430ba55fc1o6890ct12a8363f6d64d";
@@ -160,7 +159,7 @@ if(loaded){
         </div>
         
         <div className="results">
-        <Result data={data} dataPT={dataPT} language={language} keyWordPt={keyWordPt} errorData={errorData}/>
+        <Result data={data} dataPT={dataPT} language={language} keyWord={keyWord} keyWordPt={keyWordPt} impressWord={impressWord}/>
         <Photo photos={photos} language={language}/>
         </div>
         </div>

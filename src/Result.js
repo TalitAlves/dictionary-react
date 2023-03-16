@@ -1,13 +1,11 @@
 import React from "react";
 import Meaning from "./Meaning"
-import { useEffect, useState } from "react";
+
 
 
 export default function Results (props){
-    const [loadResults, setLoadResults] = useState(true)
-
-console.log(props.error)
-if  (loadResults && props.data && props.language ==="EN"){
+   
+  if  (props.data && props.language ==="EN"){
      return(
         <div>
             <div className="word-result">
@@ -37,28 +35,26 @@ if  (loadResults && props.data && props.language ==="EN"){
       
     );
 
-} if ( loadResults && props.dataPT && props.language==="PT"){  
+} if ( props.dataPT && props.language==="PT"){  
+    
     return( (<div>
         
             <div className="word-result">
-                <div className="word" id="word">{props.keyWordPt}</div>         
+                <div className="word" id="word">{props.impressWord}</div>         
             </div>
-     
+
+           
             <div className="meaning">
-                <div className="partOfSpeech">{props.dataPT.partOfSpeech}</div>
-                <div>{props.dataPT.meanings.map(function(meanings, index){
-                    return(<div key={index} className="definition">{meanings}</div>)
-                })}</div>
-                                       
+               <div>{props.dataPT.data.map(function(data,index){
+                    return( 
+                    	<div key={index}>
+                        <div className="partOfSpeech">{data.partOfSpeech}</div>
+                        <div className="definition">{data.meanings?.map(function(meanings, index){
+                            return (<div key={index}>{meanings}</div>)
+                        })}</div>
+                        </div> )})}
+                </div>
+                                                       
             </div>
         </div>))
-} else if(props.data && props.errorData){
-    setLoadResults(false)
-    console.log(props.errorData.code)
-    console.log("hello from error")
-      
-    return(
-        <div className="word" id="word">"sorry"</div>
-    
-    )
 }}

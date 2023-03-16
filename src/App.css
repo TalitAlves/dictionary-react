@@ -171,8 +171,6 @@ text-align: center;
   background-color: #ddd;
 }
 
-
-
 .phonetic-audio a{
    text-decoration: none;
 }
@@ -180,8 +178,6 @@ text-align: center;
 .phonetic-text{
   margin-bottom: 10px;
 }
-
-
 
 .partOfSpeech{
   font-weight: 700;
@@ -191,6 +187,10 @@ text-align: center;
 
 .partOfSpeech::first-letter{
   text-transform: capitalize;
+}
+
+.definition{
+  margin-bottom: 10px;
 }
 
 

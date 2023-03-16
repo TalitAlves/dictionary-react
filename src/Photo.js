@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Photo(props){
-    if(props.photos && props.language==="EN"){
+    if(props.photos){
         return(
         <div className="photos">
             {props.photos.map(function(photos,index){

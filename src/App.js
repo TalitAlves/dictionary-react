@@ -5,7 +5,7 @@ import Dictionary from "./Dictionary"
 function App() {
   return (
     <div className="App">
-        <Dictionary defaultWordEn={"Light"} defaultWordPt={"Solidário"}/>
+        <Dictionary defaultWordEn={"Light"} defaultWordPt={"Sol"}/>
         
     </div>
   );
