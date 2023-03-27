@@ -6,8 +6,6 @@ import Result from "./Result"
 import Photo from "./Photo";
 
 
-
-
 export default function Dictionary(props){
 let keyWord;
 const [impressWord, setImpressWord] = useState(props.defaultWordPt)
