@@ -64,11 +64,6 @@ function handleApiPT(response){
 function searchPT(){
     let apiURLPT = `https://dicio-api-ten.vercel.app/v2/${keyWordPt}`;
     axios.get(apiURLPT).then(handleApiPT)
-
-    let apiKey="40430ba55fc1o6890ct12a8363f6d64d";
-    let apiPhotos= `https://api.shecodes.io/images/v1/search?query=${keyWordPt}&key=${apiKey}`;
-    axios.get(apiPhotos).then(handleResponsePhotos); 
-
 }
 
 
